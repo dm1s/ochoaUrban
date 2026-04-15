@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Work+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Work Sans", sans-serif;
+
+  --color-primary: #006294;
+  --color-primary-container: #007cb9;
+  --color-on-primary: #ffffff;
+  --color-surface: #f7f9ff;
+  --color-surface-container: #ffffff;
+  --color-on-surface: #181c20;
+  --color-on-surface-variant: #404850;
+  --color-outline-variant: #bfc7d1;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .blueprint-grid {
+    background-image: 
+        linear-gradient(to right, rgba(0, 98, 148, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 98, 148, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
